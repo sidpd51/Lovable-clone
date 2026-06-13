@@ -6,7 +6,7 @@ import com.codingshuttle.projects.lovable_clone.dto.auth.SignupRequest;
 import org.jspecify.annotations.Nullable;
 
 public interface AuthService {
-    @Nullable AuthResponse signup(SignupRequest request);
+    AuthResponse signup(SignupRequest request);
 
-    @Nullable AuthResponse login(LoginRequest request);
+    AuthResponse login(LoginRequest request);
 }

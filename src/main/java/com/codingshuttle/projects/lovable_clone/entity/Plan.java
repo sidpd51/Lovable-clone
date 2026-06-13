@@ -11,9 +11,10 @@ import lombok.experimental.FieldDefaults;
 public class Plan {
     Long id;
     String name;
-    String stripe_price_id;
-    Integer max_project;
+    String stripePriceId;
+    Integer maxProject;
     Integer maxTokensPerDay;
-    Boolean unlimitedAt;
+    Integer maxPreviews;
+    Boolean unlimitedAi;
     Boolean active;
 }
