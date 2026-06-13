@@ -1,6 +1,5 @@
 package com.codingshuttle.projects.lovable_clone.entity;
 
-import com.codingshuttle.projects.lovable_clone.MessageRole;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;

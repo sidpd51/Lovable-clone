@@ -1,6 +1,6 @@
 package com.codingshuttle.projects.lovable_clone.entity;
 
-import com.codingshuttle.projects.lovable_clone.SubscriptionEnum;
+import com.codingshuttle.projects.lovable_clone.enums.SubscriptionEnum;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
