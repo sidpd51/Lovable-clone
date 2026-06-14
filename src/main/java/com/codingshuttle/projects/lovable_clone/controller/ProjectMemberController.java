@@ -3,7 +3,6 @@ package com.codingshuttle.projects.lovable_clone.controller;
 import com.codingshuttle.projects.lovable_clone.dto.member.InviteMemberRequest;
 import com.codingshuttle.projects.lovable_clone.dto.member.MemberResponse;
 import com.codingshuttle.projects.lovable_clone.dto.member.UpdateRoleRequest;
-import com.codingshuttle.projects.lovable_clone.enums.ProjectRole;
 import com.codingshuttle.projects.lovable_clone.service.ProjectMemberService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -19,6 +18,7 @@ import java.util.List;
 @RequestMapping("/api/projects/{projectId}/members")
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class ProjectMemberController {
+
     ProjectMemberService projectMemberService;
 
     @GetMapping

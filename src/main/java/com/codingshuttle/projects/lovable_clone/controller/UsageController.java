@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/usage")
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class UsageController {
+
     UsageService usageService;
 
     @GetMapping("/today")

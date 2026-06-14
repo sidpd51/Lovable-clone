@@ -18,6 +18,7 @@ import java.util.List;
 @RequestMapping("/api/projects")
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class ProjectController {
+
     ProjectService projectService;
 
     @GetMapping()
@@ -44,7 +45,7 @@ public class ProjectController {
         return ResponseEntity.ok(projectService.updateProject(id,request, userId));
     }
 
-    @DeleteMapping("/{id")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteProject(@PathVariable Long id){
         Long userId = 1L;
         projectService.softDelete(id, userId);
