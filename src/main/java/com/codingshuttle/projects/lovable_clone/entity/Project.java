@@ -1,21 +1,40 @@
 package com.codingshuttle.projects.lovable_clone.entity;
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.Instant;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Setter
 @Getter
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Table(name = "projects")
 public class Project {
+
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+
+    @Column(nullable = false)
     String name;
+
+    @ManyToOne
+    @JoinColumn(nullable = false, name = "owner_id")
     User owner;
+
     Boolean isPublic = false;
+
+    @CreationTimestamp
     Instant createdAt;
+
+    @UpdateTimestamp
     Instant updatedAt;
+
     Instant deletedAt;
 }
